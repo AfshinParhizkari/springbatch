@@ -35,10 +35,10 @@
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-        </dependency>-->
+        </dependency>
         <!--  Live Reload (Hot Swap) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
