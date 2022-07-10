@@ -26,7 +26,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableTask
+//@EnableTask
 public class TaskConfiguration {
 
 	@Autowired
