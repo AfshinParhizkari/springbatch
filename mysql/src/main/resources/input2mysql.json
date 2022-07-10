@@ -1,0 +1,7 @@
+[
+  {"firstName":"jane","lastName":"doe","minutes":"500","dataUsage":"1000"},
+  {"firstName":"john","lastName":"doe","minutes":"550","dataUsage":"1500"},
+  {"firstName":"melissa","lastName":"smith","minutes":"600","dataUsage":"1550"},
+  {"firstName":"michael","lastName":"smith","minutes":"650","dataUsage":"1500"},
+  {"firstName":"mary","lastName":"jones","minutes":"700","dataUsage":"1500"}
+]
