@@ -1,0 +1,4 @@
+CREATE TABLE `people` (
+ `FIRST_NAME` varchar(50) NOT NULL,
+ `LAST_NAME` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CH

@@ -1,0 +1,58 @@
+# ********************* Spring Cloud(SC_) Data Flow ****************************************
+# -----------------------   description; Data-Flow, Task, Stream
+# SC_Data-Flow: build composed tasks which is orchestrating Spring Batch jobs as SC_Tasks
+# Spring Batch: minimalistic framework to run batch processing applications
+# Applications
+ 1.Data Flow Server / Short-Lived - task (developed by SC_Task framework or Spring Batch jobs)
+ 2.Skipper Server / Long-Lived - stream(developed by SC_Streams) : source, processor, sink.
+
+# data flow dashboard file path
+    file://home/afshin/myprojects/github/afshin/springbatch/json2file/target/json2file-1.jar
+
+# ____________________________________ Mariadb sdf ________________________
+    java -jar /home/afshin/docker/dataflow/spring-cloud-dataflow-server-2.10.0-SNAPSHOT.jar\
+     --spring.datasource.url="jdbc:mysql://localhost:3306/dataflow?permitMysqlScheme&allowPublicKeyRetrieval=true&useSSL=false"\
+     --spring.datasource.username=admin\
+     --spring.datasource.password=123456\
+     --spring.datasource.driver-class-name=org.mariadb.jdbc.Driver\
+     --spring.cloud.dataflow.features.streams-enabled=false\
+     --spring.cloud.dataflow.features.schedules-enabled=false\
+     --spring.cloud.dataflow.features.tasks-enabled=true
+
+    java -jar /home/afshin/docker/dataflow/spring-cloud-dataflow-server-2.10.0-SNAPSHOT.jar --spring.datasource.url="jdbc:mysql://localhost:3306/dataflow?permitMysqlScheme&allowPublicKeyRetrieval=true&useSSL=false" --spring.datasource.username=admin --spring.datasource.password=123456 --spring.datasource.driver-class-name=org.mariadb.jdbc.Driver --spring.cloud.dataflow.features.streams-enabled=false --spring.cloud.dataflow.features.schedules-enabled=false --spring.cloud.dataflow.features.tasks-enabled=true
+# Extra Mariadb sdf config:
+    --spring.datasource.initialization-mode=always\
+    --spring.jpa.properties.hibernate.id.new_generator_mappings=false\
+    --spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect\
+    --spring.jpa.hibernate.ddl-auto=none\
+    --spring.batch.initialize-schema=always\
+    --spring.flyway.enabled=false
+    --spring.jpa.show-sql=true\
+    --spring.jpa.properties.hibernate.format_sql=true\
+
+java -jar /home/afshin/myprojects/lib/spring-batch/spring-cloud-skipper-server-2.8.2.jar
+# ____________________________________ h2 sdf ________________________
+    java -jar /home/afshin/myprojects/lib/spring-batch/spring-cloud-dataflow-server-2.9.2.jar\
+    --spring.datasource.url=jdbc:h2:mem:dataflow;DATABASE_TO_UPPER=false\
+    --spring.datasource.driverClassName=org.h2.Driver\
+    --spring.datasource.username=sa\
+    --spring.datasource.password=\
+    --spring.jpa.database-platform=org.hibernate.dialect.H2Dialect\
+    --spring.h2.console.enabled=true\
+    --spring.h2.console.path=/h2\
+    --spring.h2.console.settings.trace=false\
+    --spring.h2.console.settings.web-allow-others=true
+# ____________________________________ postgres sdf ________________________
+    java -jar /home/afshin/myprojects/lib/spring-batch/spring-cloud-dataflow-server-2.9.4.jar\
+    --spring.datasource.url=jdbc:postgresql://localhost:5432/dataflow\
+    --spring.datasource.username=postgres\
+    --spring.datasource.password=123456\
+    --spring.datasource.driver-class-name=org.postgresql.Driver\
+    --spring.cloud.dataflow.features.schedules-enabled=true\
+    --spring.datasource.initialization-mode=always\
+    --spring.jpa.properties.hibernate.id.new_generator_mappings=false\
+    --spring.flyway.enabled=false
+# ____________________________________ Oracle sdf ________________________
+    java -classpath /home/afshin/myprojects/lib/oracle/ojdbc14-11.2.0.jar -jar /home/afshin/myprojects/lib/spring-batch/spring-cloud-dataflow-server-2.9.2.jar --spring.datasource.url=jdbc:oracle:thin:@localhost:1521:dataflow --spring.datasource.username=admin --spring.datasource.password=123456 --spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+# ********************* tmp **********************************************
+

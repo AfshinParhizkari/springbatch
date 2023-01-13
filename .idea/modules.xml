@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/billsetuptask/billsetuptask.iml" filepath="$PROJECT_DIR$/billsetuptask/billsetuptask.iml" />
-      <module fileurl="file://$PROJECT_DIR$/h2/h2.iml" filepath="$PROJECT_DIR$/h2/h2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mysql/mysql.iml" filepath="$PROJECT_DIR$/mysql/mysql.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/springbatch.iml" filepath="$PROJECT_DIR$/.idea/springbatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/csv2dbtask/csv2dbtask.iml" filepath="$PROJECT_DIR$/csv2dbtask/csv2dbtask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/json2dbtask/json2dbtask.iml" filepath="$PROJECT_DIR$/json2dbtask/json2dbtask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbatch.iml" filepath="$PROJECT_DIR$/springbatch.iml" />
     </modules>
   </component>
 </project>
