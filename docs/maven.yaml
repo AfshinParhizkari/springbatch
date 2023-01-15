@@ -1,0 +1,10 @@
+maven:
+  localRepository: ${user.home}/.m2/repository/
+  remote-repositories:
+    mavenrepo:
+      url: https://repo.maven.apache.org/maven2
+    springrepo:
+      url: https://repo.spring.io/ui/native/release
+  proxy:
+    host: "192.168.2.50"
+    port: "3128"

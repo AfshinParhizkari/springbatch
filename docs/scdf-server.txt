@@ -6,8 +6,16 @@
  1.Data Flow Server / Short-Lived - task (developed by SC_Task framework or Spring Batch jobs)
  2.Skipper Server / Long-Lived - stream(developed by SC_Streams) : source, processor, sink.
 
-# data flow dashboard file path
-    file://home/afshin/myprojects/github/afshin/springbatch/json2file/target/json2file-1.jar
+# scdf dashboard:
+1.Add application(s)
+2.Register one or more applications
+3.Type:Task
+3.file://home/afshin/docker/dataflow/springbatch/csv2dbtask-1.jar
+
+# install spring-cloud-dataflow-composed-task-runner-2.10.0:
+in the /root folder
+mv maven.yaml /root/
+mvn install:install-file -Dhttp.proxyHost=192.168.2.50 -Dhttp.proxyPort=3128 -Dhttps.proxyHost=192.168.2.50 -Dhttps.proxyPort=3128 -Dfile=/home/afshin/docker/dataflow/spring-cloud-dataflow-composed-task-runner-2.10.0.jar -DgroupId=org.springframework.cloud -DartifactId=spring-cloud-dataflow-composed-task-runner -Dversion=2.10.0 -Dpackaging=jar
 
 # ____________________________________ Mariadb sdf ________________________
     java -jar /home/afshin/docker/dataflow/spring-cloud-dataflow-server-2.10.0-SNAPSHOT.jar\
@@ -17,7 +25,8 @@
      --spring.datasource.driver-class-name=org.mariadb.jdbc.Driver\
      --spring.cloud.dataflow.features.streams-enabled=false\
      --spring.cloud.dataflow.features.schedules-enabled=false\
-     --spring.cloud.dataflow.features.tasks-enabled=true
+     --spring.cloud.dataflow.features.tasks-enabled=true\
+     --spring.config.additional-location=/home/afshin/docker/dataflow/maven.yaml
 
     java -jar /home/afshin/docker/dataflow/spring-cloud-dataflow-server-2.10.0-SNAPSHOT.jar --spring.datasource.url="jdbc:mysql://localhost:3306/dataflow?permitMysqlScheme&allowPublicKeyRetrieval=true&useSSL=false" --spring.datasource.username=admin --spring.datasource.password=123456 --spring.datasource.driver-class-name=org.mariadb.jdbc.Driver --spring.cloud.dataflow.features.streams-enabled=false --spring.cloud.dataflow.features.schedules-enabled=false --spring.cloud.dataflow.features.tasks-enabled=true
 # Extra Mariadb sdf config:
