@@ -1,14 +1,15 @@
 # ********************* docker run **********************************************
-    docker container run -itd --hostname dataflow-server  --name data-flow -p 9393:9393\
-    -e "sspring.datasource.url="jdbc:mysql://localhost:3306/dataflow?permitMysqlScheme&allowPublicKeyRetrieval=true&useSSL=false"\
-    -e "spring.datasource.username=admin"\
-    -e "spring.datasource.password=123456"\
-    -e "spring.datasource.driver-class-name=org.mariadb.jdbc.Driver"\
-    -e "spring.cloud.dataflow.features.schedules-enabled=false"\
-    -e "spring.cloud.dataflow.features.tasks-enabled=true"\
-    -e "spring.config.additional-location=/home/afshin/docker/dataflow/maven.yaml"\
-    localhost:5000/spring-cloud-dataflow-server
+docker container run -it --hostname dataflow  --name dataflow-server -p 9393:9393\
+	-e spring.datasource.url='jdbc:mysql://ubuntu:3306/dataflow?permitMysqlScheme&allowPublicKeyRetrieval=true&useSSL=false'\
+	-e "spring.datasource.username=admin"\
+	-e "spring.datasource.password=123456"\
+	-e "spring.datasource.driver-class-name=org.mariadb.jdbc.Driver"\
+	-e "spring.cloud.dataflow.features.streams-enabled=false"\
+	-e "spring.cloud.dataflow.features.schedules-enabled=false"\
+	-e "spring.cloud.dataflow.features.tasks-enabled=true"\
+	-e "spring.config.additional-location=/home/afshin/docker/dataflow/maven.yaml"\
+	localhost:5000/spring-cloud-dataflow-server:local
 
 # ********************* tmp **********************************************
-    docker container rm data-flow
-    docker logs -f data-flow
+    docker container rm -f dataflow-server
+    docker logs -f dataflow-server

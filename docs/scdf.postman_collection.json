@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "9a57d0fb-fbef-418d-b9c2-0a570f7e754a",
+		"name": "scdf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10949429"
+	},
+	"item": [
+		{
+			"name": "task-validation",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "task-execute",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://ubuntu:9393/tasks/executions/?name=filetransfer-csvtransfer&properties=&arquments=",
+					"protocol": "http",
+					"host": [
+						"ubuntu"
+					],
+					"port": "9393",
+					"path": [
+						"tasks",
+						"executions",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "filetransfer-csvtransfer"
+						},
+						{
+							"key": "properties",
+							"value": ""
+						},
+						{
+							"key": "arquments",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "job-restart",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
