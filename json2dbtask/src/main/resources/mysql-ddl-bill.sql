@@ -12,5 +12,3 @@ CREATE TABLE test_general.bill_statement (
 DEFAULT CHARSET=utf8mb4
 COLLATE=utf8mb4_persian_ci
 COMMENT='';
-
-SELECT * FROM test_general.bill_statement;

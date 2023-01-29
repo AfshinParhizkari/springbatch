@@ -1,0 +1,24 @@
+# ********************* Spring Cloud(SC_) Data Flow ****************************************
+# -----------------------   description; Data-Flow, Task, Stream
+# SC_Data-Flow: build composed tasks which is orchestrating Spring Batch jobs as SC_Tasks
+# Spring Batch: minimalistic framework to run batch processing applications
+# Applications
+ 1.Data Flow Server / Short-Lived - task (developed by SC_Task framework or Spring Batch jobs)
+ 2.Skipper Server / Long-Lived - stream(developed by SC_Streams) : source, processor, sink.
+
+# scdf dashboard:http://ubuntu:9393/dashboard/index.html#/apps
+1.Add application(s)
+2.Register one or more applications
+3.Type:Task
+3.file://home/afshin/docker/dataflow/springbatch/csv2dbtask-1.jar
+
+# install spring-cloud-dataflow-composed-task-runner-2.10.0:
+in the /root folder
+mv maven.yaml /root/
+mvn install:install-file -Dhttp.proxyHost=192.168.2.50 -Dhttp.proxyPort=3128 -Dhttps.proxyHost=192.168.2.50 -Dhttps.proxyPort=3128 -Dfile=/home/afshin/docker/dataflow/spring-cloud-dataflow-composed-task-runner-2.10.0.jar -DgroupId=org.springframework.cloud -DartifactId=spring-cloud-dataflow-composed-task-runner -Dversion=2.10.0 -Dpackaging=jar
+
+# scdf shell: https://www.springcloud.io/post/2022-04/spring-cloud-dataflow-shell/#gsc.tab=0
+java -jar /home/afshin/docker/dataflow/spring-cloud-dataflow-shell-2.10.0-SNAPSHOT.jar
+1.task execution list
+2.task launch filetransfer-csvtransfer
+3.task execution status status_id
