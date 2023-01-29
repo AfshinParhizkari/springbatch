@@ -1,4 +1,4 @@
-# scdf api:http://ubuntu:9393/
+# scdf api:http://ubuntu:9393/dashboard/#/apps
 # Mariadb scdf
     java -jar /home/afshin/docker/dataflow/spring-cloud-dataflow-server-2.10.0-SNAPSHOT.jar\
      --spring.datasource.url="jdbc:mysql://localhost:3306/dataflow?permitMysqlScheme&allowPublicKeyRetrieval=true&useSSL=false"\
