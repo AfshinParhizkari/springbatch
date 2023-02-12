@@ -1,6 +1,8 @@
 # ********************* tmp **********************************************
 file://workspace/csv2dbtask-1.jar
 # ********************* docker run **********************************************
+export DATAFLOW_VERSION=2.10.0-SNAPSHOT
+
 docker container rm -f dataflow-server
 docker container run -itd --hostname dataflow  --name dataflow-server -p 9393:9393 --link mysql \
         -v /home/afshin/docker/repository/scdf/tmp:/tmp\
@@ -14,7 +16,11 @@ docker container run -itd --hostname dataflow  --name dataflow-server -p 9393:93
         -e spring.cloud.dataflow.features.schedules-enabled='false'\
         -e spring.cloud.dataflow.features.tasks-enabled='true'\
         -e spring.jpa.properties.hibernate.dialect='org.hibernate.dialect.MySQL8Dialect'\
+        localhost:5000/spring-cloud-dataflow-server:2.10.1-SNAPSHOT
         localhost:5000/spring-cloud-dataflow-server:local
+        springcloud/spring-cloud-dataflow-server:2.10.1-SNAPSHOT
+
+docker logs -f dataflow-server
 # ********************* tmp **********************************************
     docker container rm -f dataflow-server
     docker logs -f dataflow-server
