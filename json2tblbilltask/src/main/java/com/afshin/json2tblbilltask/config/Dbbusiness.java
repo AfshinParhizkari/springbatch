@@ -35,7 +35,7 @@ public class Dbbusiness {
     public LocalContainerEntityManagerFactoryBean bizEntityManagerFactory(
            @Qualifier("bizDataSource") DataSource dataSource,EntityManagerFactoryBuilder builder){
         return builder.dataSource(dataSource)
-                .packages("com.afshin.csv2tblpersontask.entity")
+                .packages("com.afshin.json2tblbilltask.entity")
                 .persistenceUnit("dbbusiness")
                 .properties(jpaProperties())
                 .build();

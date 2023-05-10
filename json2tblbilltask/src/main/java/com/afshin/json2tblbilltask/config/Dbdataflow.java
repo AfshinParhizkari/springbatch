@@ -40,7 +40,7 @@ public class Dbdataflow {
     public LocalContainerEntityManagerFactoryBean sdfEntityManagerFactory(
             @Qualifier("sdfDataSource") DataSource dataSource, EntityManagerFactoryBuilder builder){
         return builder.dataSource(dataSource)
-                .packages("com.afshin.csv2tblpersontask.entity")
+                .packages("com.afshin.json2tblbilltask.entity")
                 .persistenceUnit("dbdataflow")
                 .properties(jpaProperties())
                 .build();

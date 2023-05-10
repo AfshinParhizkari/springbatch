@@ -17,8 +17,8 @@ import org.springframework.cloud.task.configuration.EnableTask;
 @SpringBootApplication
 @EnableBatchProcessing
 @EnableTask
-public class json2tblbilltask {
+public class Json2tblbilltask {
     public static void main(String[] args) {
-        SpringApplication.run(json2tblbilltask.class, args);
+        SpringApplication.run(Json2tblbilltask.class, args);
     }
 }
