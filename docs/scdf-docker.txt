@@ -1,5 +1,5 @@
 # ********************* tmp **********************************************
-file://workspace/csv2dbtask-1.jar
+file://workspace/csv2tblpersontask-1.jar
 # ********************* docker run **********************************************
 export DATAFLOW_VERSION=2.10.0-SNAPSHOT
 

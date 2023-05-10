@@ -10,7 +10,7 @@
 1.Add application(s)
 2.Register one or more applications
 3.Type:Task
-3.file://home/afshin/docker/dataflow/springbatch/csv2dbtask-1.jar
+3.file://home/afshin/docker/dataflow/springbatch/csv2tblpersontask-1.jar
 
 # install spring-cloud-dataflow-composed-task-runner-2.10.0:
 in the /root folder

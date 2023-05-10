@@ -10,8 +10,8 @@
     <description>2 tasks and 1 stream</description>
     <url>https://github.com/AfshinParhizkari</url>
     <modules>
-        <module>csv2dbtask</module>
-        <module>json2dbtask</module>
+        <module>csv2tblpersontask</module>
+        <module>json2tblbilltask</module>
     </modules>
     <developers>
         <developer>

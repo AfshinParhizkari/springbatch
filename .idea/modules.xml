@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/csv2dbtask/csv2dbtask.iml" filepath="$PROJECT_DIR$/csv2dbtask/csv2dbtask.iml" />
-      <module fileurl="file://$PROJECT_DIR$/json2dbtask/json2dbtask.iml" filepath="$PROJECT_DIR$/json2dbtask/json2dbtask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/csv2tblpersontask/csv2tblpersontask.iml" filepath="$PROJECT_DIR$/csv2tblpersontask/csv2tblpersontask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/json2tblbilltask/json2tblbilltask.iml" filepath="$PROJECT_DIR$/json2tblbilltask/json2tblbilltask.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbatch.iml" filepath="$PROJECT_DIR$/springbatch.iml" />
     </modules>
   </component>
