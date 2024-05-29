@@ -28,7 +28,7 @@ services:
       - LANG=en_US.utf8
       - LC_ALL=en_US.utf8
       - JDK_JAVA_OPTIONS=-Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8
-      - SPRING_DATASOURCE_URL=jdbc:mysql://ubuntu:3306/dataflow?permitMysqlScheme&allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_URL=jdbc:mysql://afshin:3306/dataflow?permitMysqlScheme&allowPublicKeyRetrieval=true&useSSL=false
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.mariadb.jdbc.Driver
       - SPRING_DATASOURCE_USERNAME='admin'
       - SPRING_DATASOURCE_PASSWORD='123456'
